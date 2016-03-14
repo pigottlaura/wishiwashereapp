@@ -1,0 +1,27 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<script src="processing.js"></script>
+		<script type="text/processing" data-processing-target="processing-canvas">
+			color bgColor = #C390D4;
+			float circleSize = width/3;
+			
+			void setup() {
+				size(600, 400);
+				background(bgColor);
+				fill(#EB54C8);
+				ellipse(width/2, height/2, circleSize, circleSize);
+				println('hello web!');
+			}
+			
+			void draw() {
+				if(mousePressed){
+					background(bgColor);
+					ellipse(mouseX, mouseY, circleSize, circleSize);
+				}
+			}
+		</script>
+		<canvas id="processing-canvas"> </canvas>
+	</body>
+</html>
